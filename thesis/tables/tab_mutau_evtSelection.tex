@@ -1,0 +1,40 @@
+%%% MU-TAU event selection
+\begin{table}[!hbpt]
+\centering
+\caption{Event selection criteria for the kinematic variables for the \Hmt channels}
+\begin{tabular}{lccccccccc}
+\hline
+Variable                       &       \multicolumn{4}{c}{\muhad}            & &          \multicolumn{4}{c}{\mue}                    \\
+\hline
+$\pt^{\Pe}$                    &       \multicolumn{4}{c}{\NA}               & &          \multicolumn{4}{c}{$>13$}                   \\
+$\pt^{\Pgm}$                   &       \multicolumn{4}{c}{$>26$}             & &          \multicolumn{4}{c}{$>24$}                   \\
+$\pt^{\tauh}$                  &       \multicolumn{4}{c}{$>30$}             & &          \multicolumn{4}{c}{\NA}                     \\
+\hline
+$\abs{\eta}^{\Pe}$             &       \multicolumn{4}{c}{\NA}               & &          \multicolumn{4}{c}{$<2.5$}                  \\
+$\abs{\eta}^{\Pgm}$            &       \multicolumn{4}{c}{$<2.1$}            & &          \multicolumn{4}{c}{$<2.4$}                  \\
+$\abs{\eta}^{\tauh}$           &       \multicolumn{4}{c}{$<2.3$}            & &          \multicolumn{4}{c}{\NA}                     \\
+\hline
+$I^{\Pe}_{\text{rel}}$         &       \multicolumn{4}{c}{\NA}               & &          \multicolumn{4}{c}{$<0.1$}                  \\
+$I^{\Pgm}_{\text{rel}}$        &       \multicolumn{4}{c}{$<0.15$}           & &          \multicolumn{4}{c}{$<0.15$}                 \\
+$I^{\tauh}_{\text{rel}}$       &       \multicolumn{4}{c}{DNN \tauh ID}      & &          \multicolumn{4}{c}{\NA}                     \\
+\hline
+Trigger                        &    \multicolumn{4}{c}{\Pgm(24) (all years)} & & \multicolumn{4}{c}{\Pe(12) and \Pgm(23) (all years)} \\
+\hline \\
+
+                               &                          \multicolumn{9}{c}{\mcol fit selection}                                     \\
+\cline{2-10}
+                               & 0-jet  & 1-jet  & \multicolumn{2}{c}{2-jet} & & 0-jet  & 1-jet  & \multicolumn{2}{c}{2-jet}          \\
+\cline{2-5} \cline{7-10}
+                               &        &        &   ggF       &      VBF    & &        &        &   ggF       &      VBF             \\
+\hline
+\mjj                           &   \NA    &   \NA    &  $<550$   & $\geq550$ & &    \NA    &    \NA    &  $<550$   &  $\geq550$       \\
+\hline
+$\pt^{\Pgm}$                   &          \multicolumn{4}{c}{\NA}            & &   $>30$   &   $>26$   &   $>26$   &   $>26$          \\
+\mt(\Pgm)                      &          \multicolumn{4}{c}{\NA}            & &   $>60$   &   $>40$   &   $>15$   &   $>15$          \\
+\mt(\Pgt)                      &  $<105$  &  $<105$  &  $<105$   &   $<85$   & &           \multicolumn{4}{c}{\NA}                    \\
+\dphiemet                      &          \multicolumn{4}{c}{\NA}            & &   $<0.7$  &   $<0.7$  &   $<0.5$  &   $<0.3$         \\
+\dphiem                        &          \multicolumn{4}{c}{\NA}            & &   $>2.5$  &   $>1.0$  &    \NA    &    \NA           \\
+\hline
+\end{tabular}
+\label{tab:mutau_evtselection}
+\end{table}

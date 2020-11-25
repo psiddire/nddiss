@@ -1,0 +1,95 @@
+This is BibTeX, Version 0.99d (TeX Live 2019)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: thesis.aux
+A level-1 auxiliary file: chapter1.aux
+A level-1 auxiliary file: chapter2.aux
+A level-1 auxiliary file: chapter3.aux
+A level-1 auxiliary file: chapter4.aux
+A level-1 auxiliary file: chapter5.aux
+A level-1 auxiliary file: chapter6.aux
+A level-1 auxiliary file: chapter7.aux
+A level-1 auxiliary file: chapter8.aux
+A level-1 auxiliary file: chapter9.aux
+A level-1 auxiliary file: chapter10.aux
+A level-1 auxiliary file: appendix.aux
+The style file: unsrtnat.bst
+Database file #1: thesis.bib
+Warning--I didn't find a database entry for "fig:sm_particles"
+Warning--I didn't find a database entry for "fig:h_vertices"
+Warning--I didn't find a database entry for "fig:tmg"
+Warning--I didn't find a database entry for "tab:indirect"
+Warning--empty author in Evans:2008zzb
+Warning--empty journal in deFlorian:2016spz
+Warning--empty author in Electron-Positron:1997351
+Warning--empty journal in Electron-Positron:1997351
+Warning--empty author in accelerator:1997427
+Warning--empty journal in accelerator:1997427
+Warning--empty author in Synchrotron:1997372
+Warning--empty journal in Synchrotron:1997372
+Warning--empty author in Synchrotron:1997189
+Warning--empty journal in Synchrotron:1997189
+Warning--empty author in Synchrotron:1997188
+Warning--empty journal in Synchrotron:1997188
+Warning--empty year in lumi
+Warning--empty author in BUL-NA-2003-150
+Warning--empty journal in BUL-NA-2003-150
+Warning--there's a number but no volume in BUL-NA-2003-150
+Warning--empty author in CMS:2010bta
+Warning--empty journal in CMS:2010bta
+Warning--empty journal in Bayatian:2006nff
+Warning--empty author in CMS:2019jhq
+Warning--empty journal in CMS:2019jhq
+Warning--empty author in CMS:2018elu
+Warning--empty journal in CMS:2018elu
+Warning--empty author in CMS:2017sdi
+Warning--empty journal in CMS:2017sdi
+Warning--empty author in CMS:2013gfa
+Warning--empty journal in CMS:2013gfa
+Warning--empty year in muon_pog
+Warning--empty journal in Hocker:2007ht
+Warning--empty author in ATLAS:2011tau
+Warning--empty journal in ATLAS:2011tau
+Warning--empty author in CMS:2016gvn
+Warning--empty journal in CMS:2016gvn
+You've used 89 entries,
+            2481 wiz_defined-function locations,
+            1145 strings with 19078 characters,
+and the built_in function-call counts, 32514 in all, are:
+= -- 2939
+> -- 1332
+< -- 57
++ -- 565
+- -- 378
+* -- 2455
+:= -- 5055
+add.period$ -- 329
+call.type$ -- 89
+change.case$ -- 177
+chr.to.int$ -- 80
+cite$ -- 137
+duplicate$ -- 1700
+empty$ -- 3128
+format.name$ -- 501
+if$ -- 6988
+int.to.chr$ -- 10
+int.to.str$ -- 90
+missing$ -- 87
+newline$ -- 515
+num.names$ -- 222
+pop$ -- 654
+preamble$ -- 1
+purify$ -- 89
+quote$ -- 0
+skip$ -- 998
+stack$ -- 0
+substring$ -- 1551
+swap$ -- 220
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 623
+warning$ -- 33
+while$ -- 254
+width$ -- 0
+write$ -- 1254
+(There were 37 warnings)
