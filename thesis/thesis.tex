@@ -38,6 +38,8 @@
 
 \usepackage{ mathrsfs }
 \usepackage{mathtools}
+\usepackage{bbold}
+\usepackage{amsmath}
 %\usepackage{enumitem}
 \usepackage{subfigure}
 \usepackage{lineno}
@@ -74,136 +76,7 @@
 
 \begin{document}
 
-\def\XX         {\ensuremath{\textcolor{red}{XX}\xspace}}
-\def\Ymutau     {\ensuremath{|\text{Y}_{\Pgm\Pgt}|}\xspace}
-\def\Ytaumu     {\ensuremath{|\text{Y}_{\Pgt\Pgm}|}\xspace}
-\def\Ytaue      {\ensuremath{|\text{Y}_{\Pgt\Pe}|}\xspace}
-\def\Yetau      {\ensuremath{|\text{Y}_{\Pe\Pgt}|}\xspace}
-\def\Ytt        {\ensuremath{\text{Y}_{\Pgt\Pgt}}\xspace}
-\def\Ymm        {\ensuremath{\text{Y}_{\Pgm\Pgm}}\xspace}
-\def\Yee        {\ensuremath{\text{Y}_{\Pe\Pe}}\xspace}
-\def\Yet        {\ensuremath{\text{Y}_{\Pe\Pgt}}\xspace}
-\def\Yte        {\ensuremath{\text{Y}_{\Pgt\Pe}}\xspace}
-\def\Ymt        {\ensuremath{\text{Y}_{\Pgm\Pgt}}\xspace}
-\def\Ytm        {\ensuremath{\text{Y}_{\Pgt\Pgm}}\xspace}
-\def\Yem        {\ensuremath{\text{Y}_{\Pe\Pgm}}\xspace}
-\def\Yme        {\ensuremath{\text{Y}_{\Pgm\Pe}}\xspace}
-\def\Yij        {\ensuremath{\text{Y}_{ij}}\xspace}
-\def\Yji        {\ensuremath{\text{Y}_{ji}}\xspace}
-
-\def\iso        {\ensuremath{\text{SU}(2)_{L}}\xspace}
-\def\sutwo      {\ensuremath{\text{SU}(2)}\xspace}
-\def\hyp        {\ensuremath{\text{U}(1)_{Y}}\xspace}
-\def\uone       {\ensuremath{\text{U}(1)}\xspace}
-\def\col        {\ensuremath{\text{SU}(3)_{C}}\xspace}
-\def\suthree    {\ensuremath{\text{SU}(3)}\xspace}
-
-\def\amu        {\ensuremath{A_{\mu}}\xspace}
-\def\bmu        {\ensuremath{B_{\mu}}\xspace}
-
-\newcommand{\NA}{---}
-\newcommand{\PH}{\ensuremath{\text{H}}}
-\newcommand{\Pgm}{\ensuremath{\mu}}
-\newcommand{\Pe}{\ensuremath{\text{e}}}
-\newcommand{\Pgt}{\ensuremath{\tau}}
-\newcommand{\Pgg}{\ensuremath{\gamma}}
-\newcommand{\pt}{\ensuremath{\text{p}_\text{T}}}
-\newcommand{\ET}{\ensuremath{\text{E}_\text{T}}}
-\newcommand{\PW}{\ensuremath{\text{W}}}
-\newcommand{\PZ}{\ensuremath{\text{Z}}}
-\newcommand{\Pgpz}{\ensuremath{\pi^\text{0}}}
-\newcommand{\ptvec}{\ensuremath{{\vec p}_{\mathrm{T}}}\xspace}
-\newcommand{\ptmiss}{\ensuremath{\pt^\text{miss}}\xspace}
-\newcommand{\ptvecmiss}{\ensuremath{{\vec p}_{\mathrm{T}}^{\kern1pt\text{miss}}}\xspace}
-\newcommand{\ptnu}{\ensuremath{p_{\text{T}}^{\nu,\text{est}}}\xspace}
-\newcommand{\ptvis}{\ensuremath{p_{\text{T}}^{\vec{\Pgt}^{\text{vis}}}}\xspace}
-\newcommand{\vectvis}{\ensuremath{\vec{\Pgt}^{\text{vis}}}\xspace}
-\newcommand{\met}{\ensuremath{\cancel{\it{E}}_{T}}\xspace}
-\newcommand{\metproj}{\ensuremath{\cancel{\it{E}}_{T, proj}}\xspace}
-
-\newcommand{\sqs}{\ensuremath{\sqrt{\text{s}}}\xspace}
-\newcommand{\fb}{\ensuremath{\text{fb}^{-1}}\xspace}
-\newcommand{\lumi}{\ensuremath{\text{cm}^{-2}\text{s}^{-1}}\xspace}
-
-\newcommand{\m}{\ensuremath{\text{m}}\xspace}
-\newcommand{\cm}{\ensuremath{\text{cm}}\xspace}
-\newcommand{\mum}{\ensuremath{\mu \text{m}}\xspace}
-
-\newcommand{\eV}{\ensuremath{\,\text{e\hspace{-.08em}V}}\xspace}
-\newcommand{\MeV}{\ensuremath{\,\text{Me\hspace{-.08em}V}}\xspace}
-\newcommand{\GeV}{\ensuremath{\,\text{Ge\hspace{-.08em}V}}\xspace}
-\newcommand{\TeV}{\ensuremath{\,\text{Te\hspace{-.08em}V}}\xspace}
-
-\newcommand{\Zee}{\ensuremath{\PZ \to \Pe \Pe}\xspace}
-\newcommand{\Zmm}{\ensuremath{\PZ \to \Pgm \Pgm}\xspace}
-\newcommand{\Ztt}{\ensuremath{\PZ \to \Pgt \Pgt}\xspace}
-\newcommand{\Zll}{\ensuremath{\PZ \to \ell \ell}\xspace}
-\newcommand{\Hem}{\ensuremath{\PH \to \Pe \Pgm}\xspace}
-\newcommand{\Hmt}{\ensuremath{\PH \to \Pgm \Pgt}\xspace}
-\newcommand{\Hmuhad}{\ensuremath{\PH \to \Pgm \Pgt_{\text{h}}}\xspace}
-\newcommand{\Hmue}{\ensuremath{\PH \to \Pgm \Pgt_{e}}\xspace}
-\newcommand{\Het}{\ensuremath{\PH \to \Pe \Pgt}\xspace}
-\newcommand{\Hehad}{\ensuremath{\PH \to \Pe \Pgt_{\text{h}}}\xspace}
-\newcommand{\Hemu}{\ensuremath{\PH \to \Pe \Pgt_{\Pgm}}\xspace}
-\newcommand{\Htt}{\ensuremath{\PH \to \Pgt \Pgt}\xspace}
-\newcommand{\HWW}{\ensuremath{\PH \to \PW \PW}\xspace}
-\newcommand{\Htetmu}{\ensuremath{\PH \to \Pgt_{\Pe} \Pgt_{\Pgm}}\xspace}
-\newcommand{\Hteth}{\ensuremath{\PH \to \Pgt_{\Pe} \Pgt_{\textrm{h}}}\xspace}
-\newcommand{\liljg}{\ensuremath{\ell_{i} \to \ell_{j} \Pgg}\xspace}
-\newcommand{\ltl}{\ensuremath{\ell_{i} \to 3 \ell_{j}}\xspace}
-\newcommand{\mte}{\ensuremath{\Pgm \to \Pe}\xspace}
-
-\newcommand{\BHem}{\ensuremath{\mathcal{B}(\PH \to \Pe \Pgm)}\xspace}
-\newcommand{\BHet}{\ensuremath{\mathcal{B}(\PH \to \Pe \Pgt)}\xspace}
-\newcommand{\BHmt}{\ensuremath{\mathcal{B}(\PH \to \Pgm \Pgt)}\xspace}
-\newcommand{\BHij}{\ensuremath{\mathcal{B}_{\text{nat}}(\PH \to i j)}\xspace}
-\newcommand{\BHsm}{\ensuremath{\mathcal{B}_{\text{SM}}(\PH \to i j)}\xspace}
-\newcommand{\gsm}{\ensuremath{\Gamma_{\text{SM}}}\xspace}
-
-\newcommand{\mutau}{\ensuremath{\Pgm \Pgt}\xspace}
-\newcommand{\muhad}{\ensuremath{\Pgm \Pgt_{\text{h}}}\xspace}
-\newcommand{\mue}{\ensuremath{\Pgm \Pgt_{\Pe}}\xspace}
-\newcommand{\mm}{\ensuremath{\Pgm \Pgt_{\Pgm}}\xspace}
-\newcommand{\etau}{\ensuremath{\Pe \Pgt}\xspace}
-\newcommand{\ehad}{\ensuremath{\Pe \Pgt_{\text{h}}}\xspace}
-\newcommand{\emu}{\ensuremath{\Pe \Pgt_{\Pgm}}\xspace}
-\newcommand{\ee}{\ensuremath{\Pe \Pgt_{\Pe}}\xspace}
-\newcommand{\emm}{\ensuremath{\Pe \Pgm}\xspace}
-
-\newcommand{\tauj}{\ensuremath{\Pgt_{\text{j}}}\xspace}
-\newcommand{\tauh}{\ensuremath{\Pgt_{\text{h}}}\xspace}
-\newcommand{\taum}{\ensuremath{\Pgt_{\Pgm}}\xspace}
-\newcommand{\taue}{\ensuremath{\Pgt_{\Pe}}\xspace}
-\newcommand{\tvis}{\ensuremath{\Pgt^{\text{vis}}}\xspace}
-
-\newcommand{\pzeta}{\ensuremath{P_{\zeta}}\xspace}
-\newcommand{\mh}{\ensuremath{m_{\text{H}}}\xspace}
-\newcommand{\mjj}{\ensuremath{M_{jj}}\xspace}
-\newcommand{\mcol}{\ensuremath{M_{\text{col}}}\xspace}
-\newcommand{\mvis}{\ensuremath{M_{\text{vis}}}\xspace}
-\newcommand{\mt}{\ensuremath{M_\mathrm{T}}\xspace}
-\newcommand{\msig}{\ensuremath{100\:\GeV< M_{collinear} < \: 150\:\GeV}\xspace}
-\newcommand{\mtt}{\ensuremath{\text{m}_{\Pgt \Pgt}}\xspace}
-\newcommand{\mlt}{\ensuremath{\text{m}_{\ell \Pgt}}\xspace}
-\newcommand{\bp}{\ensuremath{\boldsymbol{p}}\xspace}
-
-\newcommand{\wjets}{\ensuremath{\PW+\text{jets}}\xspace}
-\newcommand{\zjets}{\ensuremath{\PZ+\text{jets}}\xspace}
-\newcommand{\ttbar}{\ensuremath{t\overline{t}}\xspace}
-
-\newcommand{\as}{\ensuremath{\alpha_{S}}\xspace}
-\newcommand{\aem}{\ensuremath{\alpha}\xspace}
-\newcommand{\MCATNLO} {\textsc{mc@nlo}\xspace}
-\newcommand{\aMCATNLO} {\textsc{MG5}\_a\MCATNLO\xspace}
-
-\newcommand{\dphitauhmet}{\ensuremath{\Delta\phi(\Pgt_{\text{h}},\ptvecmiss)}\xspace}
-\newcommand{\dphimtauh}{\ensuremath{\Delta\phi(\Pgm,\Pgt_{\text{h}})}\xspace}
-\newcommand{\dphietauh}{\ensuremath{\Delta\phi(\Pe,\Pgt_{\text{h}})}\xspace}
-\newcommand{\dphimmet}{\ensuremath{\Delta\phi(\Pgm,\ptvecmiss)}\xspace}
-\newcommand{\dphiemet}{\ensuremath{\Delta\phi(\Pe,\ptvecmiss)}\xspace}
-\newcommand{\dphiem}{\ensuremath{\Delta\phi(\Pe,\Pgm)}\xspace}
-\newcommand{\detamtauh}{\ensuremath{\Delta\eta(\Pgm,\Pgt_{\text{h}})}\xspace}
-\newcommand{\detaetauh}{\ensuremath{\Delta\eta(\Pe,\Pgt_{\text{h}})}\xspace}
+\input{symbols.tex}
 
 \newlength\cmsTabSkip
 \setlength\cmsTabSkip{2ex}
@@ -236,7 +109,7 @@
 
 % An abstract is optional for a mster's thesis, and required for a doctoral dissertation.
 \begin{abstract}
-This dissertation presents searches for Lepton Flavor Violating decay of the Standard Model Higgs boson (\PH) into a muon and a tau lepton or to an electron and a tau lepton. Data collected by the CMS detector in 2016-2018, in proton-proton collisions at the LHC, at a center-of-mass energy of 13\,TeV was used to perform the search. Observed (expected) upper limits on the branching fraction of \PH\, decaying into a muon and a tau lepton, $\mathcal{B}(\Hmt)$, was set at 0.15 (0.16)\,\% at 95\% CL and branching fraction of \PH\, decaying into an electron and a tau lepton, $\mathcal{B}(\Het)$, was set at 0.29 (0.19)\,\% at 95\% CL. These are the most stringent limits set on these processes till date.
+This dissertation presents searches for lepton flavor violating decay of the standard model Higgs boson into a muon and a tau lepton or to an electron and a tau lepton. Data collected by the CMS detector in 2016-2018, in proton-proton collisions at the LHC, at a center-of-mass energy of 13\,TeV corresponding to an integrated luminosity of $137~\fb$ was used to perform the search. The observed (expected) upper limits on the branching fraction of Higgs boson decaying into a muon and a tau lepton, $\mathcal{B}(\Hmt)$, were set at 0.15 (0.15)\,\% at 95\% CL and the branching fraction of Higgs boson decaying into an electron and a tau lepton, $\mathcal{B}(\Het)$, were set at 0.22 (0.16)\,\% at 95\% CL. These are the most stringent limits set on these processes to date.
 
 \end{abstract}
 
@@ -321,7 +194,8 @@ This dissertation presents searches for Lepton Flavor Violating decay of the Sta
 % Appendix (optional)
 %
 \appendix
-\include{appendix}
+\include{appendixA}
+\include{appendixB}
 
 %
 % Back stuff
