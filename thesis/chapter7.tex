@@ -2,7 +2,7 @@
 % Chapter 7
 %
 
-\chapter{Background Estimation}
+\chapter{Background estimation}
 \label{bkg_est}
 
 \section{Introduction}
@@ -34,9 +34,9 @@ The dominant contributors, \Ztt and misidentified lepton backgrounds are estimat
 \end{figure}
 
 \section{Embedding technique}
-The \Ztt background is estimated from data using the embedding technique~\cite{Sirunyan:2019drn}. The embedding technique allows for an estimation of the genuine \Pgt{}\Pgt SM backgrounds from data that minimizes uncertainties arising from a poor event description, with minimal simulation input. Events with a pair of oppositely charged muons are selected in data so that \Zmm events largely dominate it. These data events are chosen independently of the event selection criteria described in chapter~\ref{event_sel}.
+The \Ztt background is estimated from data using the embedding technique~\cite{Sirunyan:2019drn}. The embedding technique allows for an estimation of the genuine \Pgt{}\Pgt SM backgrounds from data that minimizes uncertainties arising from a poor event description, with minimal simulation input. Events with a pair of oppositely charged muons are selected in data so that \Zmm events largely dominate it. These data events are chosen independently of the event selection criteria described in Chapter~\ref{event_sel}.
 
-The muons are removed from the selected events and replaced with simulated tau leptons with the same kinematic properties as that of the replaced muon. In that way, a set of hybrid events is obtained that relies on simulation only for the decay of the tau leptons. The description of the underlying event or the production of associated jets is taken entirely from data, and there is no reliance on the simulation. This technique results in a more accurate description of the \ptvecmiss, jet related variables, and an overall reduction in the systematic uncertainties that arise due to the usage of simulated samples.
+The muons are removed from the selected events and replaced with simulated tau leptons with the same kinematic properties as that of the replaced muon. In that way, a set of hybrid events is obtained that relies on simulation only for the decay of the tau leptons. The description of the underlying-event or the production of associated jets is taken entirely from data, and there is no reliance on the simulation. This technique results in a more accurate description of the \ptvecmiss, jet related variables, and an overall reduction in the systematic uncertainties that arise due to the usage of simulated samples.
 
 Embedded samples cover all backgrounds with two real tau leptons decaying semi-hadronically or leptonically. This includes a small fraction of \ttbar, Diboson, and electroweak \PW/\PZ events. The events from the \ttbar, Diboson, and electroweak \PW/\PZ MC samples where both tau candidates match genuine taus at the generator level are removed to avoid any double counting. A schematic for the embedding technique can be seen in Figure~\ref{fig:embedding}.
 
@@ -84,7 +84,7 @@ The misidentified lepton background in the signal region is estimated using misi
   \label{fig:fake}
 \end{figure}
 
-The probabilities with which jets are misidentified as an electron, muon, or \tauh are labeled as $f_\Pe, f_\Pgm$, and $f_{\tauh}$, respectively. The \PZ boson candidate is formed using two muons with $\pt > 26 \GeV$ and $\aeta < 2.4$ and $\irel < 0.15$ for measuring the jet $\to\tauh, \Pgm, \Pe$ misidentification rate. The muons are required to be oppositely charged and have their invariant mass between 70 and 110~\GeV. The contribution from diboson events, where the jet candidate corresponds to a real lepton, is subtracted using simulation. The jet is required to pass the same lepton identification criteria as used in the SR. A ``signal-like'' sample is defined if the jet passes the tight lepton isolation, otherwise a ``background-like'' sample is defined if it only passes the looser lepton isolation. These two samples are used to estimate $f_\Pe, f_\Pgm,$ and $f_{\tauh}$ following:
+The probabilities with which jets are misidentified as an electron, muon, or \tauh are labeled as $f_\Pe, f_\Pgm$, and $f_{\tauh}$, respectively. The \PZ boson candidate is formed using two muons with $\pt > 26 \GeV$ and $\aeta < 2.4$ and $\irel < 0.15$ for measuring the jet $\to\tauh, \Pgm, \Pe$ misidentification rate. The muons are required to be oppositely charged and have their invariant mass between 70 and 110~\GeV. The contribution from diboson events, where the jet candidate corresponds to a real lepton, is subtracted using simulation. The jet is required to pass the same lepton identification criteria as used in the signal region. A ``signal-like'' sample is defined if the jet passes the tight lepton isolation, otherwise a ``background-like'' sample is defined if it only passes the looser lepton isolation. These two samples are used to estimate $f_\Pe, f_\Pgm,$ and $f_{\tauh}$ following:
 \begin{linenomath*}
   \begin{equation*}
     f_{i} = \frac{N_i(\text{signal-like})}{N_{i}(\text{background-like}) + N_i(\text{signal-like})}

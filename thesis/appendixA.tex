@@ -27,9 +27,9 @@ As only one of the lepton from an LFV Higgs decay is a tau, it was modified so t
 \end{figure*}
 
 The function $\mathcal{F}(\bp)$ in the integrand may be an arbitrary function of the momenta of the prompt and tau leptons. The integral is evaluated numerically, using a custom implementation of the Markov chain MC integration method with the Metropolis-Hastings algorithm~\cite{Hastings:1970aa}. The actual value $\mathcal{L}(y)$ of the integral is irrelevant. The reconstruction of the mass \mlt of the prompt and tau lepton pair is based on choosing:
-
+%
 $\mathcal{F}(\bp) \equiv \left(\hat{E}_{\ell} + \hat{E}_{\Pgt}\right)^{2} - \left(\left(\hat{p}_{\text{x}}^{\ell}+\hat{p}_{\text{x}}^{\Pgt}\right)^{2}+\left(\hat{p}_{\text{y}}^{\ell}+\hat{p}_{\text{y}}^{\Pgt}\right)^{2}+\left(\hat{p}_{\text{z}}^{\ell}+\hat{p}_{\text{z}}^{\Pgt}\right)^{2}\right)$,
-
+%
 recording the values of $\mathcal{F}(\bp)$ for each evaluation of the integrand by the Markov chain and taking the median of the series of $\mathcal{F}(\bp)$ values as the best estimate \mlt for the mass of the prompt and tau lepton pair in a given event. The total number of evaluations of the integrand referred to as Markov chain ``states'', amounts to 100000 per event. The first 10000 evaluations of the integrand are used as a ``burn-in'' period and are excluded from the median's computation.
 
 Figure~\ref{fig:svfit} shows the collinear mass and SVFit mass distributions. The distributions are fit with a double Gaussian, and the goodness of fit as tested from $\chi^2/\text{ndof}$ is close to one, suggesting that it is a good fit. The full width at half maximum is used for inferring the signal resolution, and it has a value of 38.88~\GeV for collinear mass, while for SVFit mass, the value is 30.90~\GeV. This corresponds to a 20\% improvement in signal resolution. The collinear mass and SVFit mass are peaking close to the Higgs mass of 125~\GeV. The collinear mass has a higher mean of $\sim 129 \GeV$ due to its larger tail, while SVFit mass has a mean of $\sim 117 \GeV$ due to it's smaller tail distribution.

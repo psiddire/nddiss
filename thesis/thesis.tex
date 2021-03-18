@@ -34,7 +34,8 @@
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[review,numrefs,sort&compress]{nddiss2e}
+% \documentclass[review,numrefs,sort&compress]{nddiss2e}
+\documentclass[final,numrefs,sort&compress,noinfo]{nddiss2e}
 
 \usepackage{ mathrsfs }
 \usepackage{mathtools}
@@ -87,7 +88,7 @@
 % Titles may be 1-4 lines long. If your title is longer than 4 lines,
 % the class file may have difficulty formatting the title page.
 % Line-breaks in the title have to be protected with `\protect`.
-\title{Search for lepton flavor violating decays of \protect\\ Standard Model Higgs to a muon and a tau lepton \protect\\ or to an electron and a tau lepton}
+\title{Search for lepton flavor violating decays of \protect\\ the Higgs boson to a muon and a tau lepton \protect\\ or to an electron and a tau lepton}
 \author{Prasanna Kumar Siddireddy}
 \work{Dissertation} % or \work{Thesis}
 \degaward{Doctor of Philosophy} % or
@@ -114,12 +115,11 @@ This dissertation presents searches for lepton flavor violating decay of the sta
 \end{abstract}
 
 % A dedication is optional.
-% \renewcommand{\dedicationname}{Dedicated to}
-%
-% \begin{dedication}
-%   To my grandfather, Venkata Rao Bandi, \\an honest and humble man. \\My grandmother, Ramanamma Bandi, \\a kind and courteous woman. \\My mother, Vijaya Lakshmi Siddireddy, \\for her love and care. \\My father, Srinivasa Rao Siddireddy, \\for his gentleness and generosity.
-%
-% \end{dedication}
+\renewcommand{\dedicationname}{Dedicated to}
+
+\begin{dedication}
+  To my grandfather, Venkata Rao Bandi, \\an honest and humble man. \\My grandmother, Ramanamma Bandi, \\a kind and courteous woman. \\My mother, Vijaya Lakshmi Siddireddy, \\for her love and care. \\My father, Srinivasa Rao Siddireddy, \\for his gentleness and generosity.
+\end{dedication}
 
 % These are required, and must be in this order.
 \tableofcontents
@@ -134,27 +134,23 @@ This dissertation presents searches for lepton flavor violating decay of the sta
 % It's hard to tell from the information available from the Graduate
 % School in Spring 2013 whether or not an acknowledgements section is optional.
 
-% \begin{acknowledge}
-%
-%   I express my gratitude to my PhD advisor and mentor, Prof. Colin Jessop. Prof. Colin has provided me with an environment where I can completely focus on my research. He has been supportive and has given positive feedback throughout my PhD which helped me grow as an individual. He has addressed my concerns in a timely fashion and I am gald to be his graduate student.
-%
-%   I thank my committee members Prof. Adam Martin, Prof. Mike Hildreth, and Prof. Umesh Garg for taking the time to review my research and encouraging me along the process with their feedback. I would also like to thank, Prof. Nancy Marinelli, for helping and working with me on several projects. I am also thankful to Nikitas Loukas and Alexander Ledovskoy for their guidance on the projects I worked with them.
-%
-%   Dr. Giacomo Cuciatti has been a great mentor and friend and had made my stay at CERN enjoyable. I thank him for his guidance on the projects I worked with and also for accompanying me on my motorcycle diaries across europe.
-%
-%   Dr. Silvia Taroni was a hard working and dedicated post doctoral fellow. I thank her for helping me in getting accustomed to the software framework and guiding me to understand the details of the analysis.
-%
-%   Dr. Nabarun Dev has been a supportive colleague and a good friend. He has helped me throughout my PhD and I will always be glad for having met him.
-%
-%   Dr. Maria Cepada has continuously encouraged me and provided me with all the necessary resources that I needed to finish my research. She has been a great motivator and an excellent advisor and I thank her for taking the time to get involved in the current analysis.
-%
-%   I thank the Notre Dame Physics Department for nurturing and supporting my growth as a scientist, and the University of Notre Dame for being my home and family for the last several years. I would especially like to thank Susan, Shari and Shelley in the physics office for helping me smoothly through many tasks over the years. I would like to thank my friends and colleagues Saurabh Bansal, Nirupama Sensharma, Abhishek Das, Fanbo Meng, Ka Wa Ho, Wenzhao Li, Lynne Lutton, Lara Zygala, Andrew Wightman, Kelci Mohrman, Geoffry Smith.
-%
-%   I thank my close friends, Pratyush Pandey, Saurabh Bansal, Khalique Newaz, Shilpi Kumar, Maisha Khair, and Elvis Eugene for being there and making my stay at Notre Dame a pleasant and wonderful journey.
-%
-%   Lastly, I would like to thank all the scientists, technicians and engineers, associated with CMS and LHC, whose collective work has made this thesis possible.
-%
-% \end{acknowledge}
+\begin{acknowledge}
+
+  I express my gratitude to my Ph.D. advisor and mentor, Prof. Colin Jessop. Prof. Colin has provided me with an environment where I can completely focus on my research. He has been supportive and has given positive feedback throughout my Ph.D., which helped me grow as an individual. He has addressed my concerns quickly, and I am glad to be his graduate student.
+
+  I thank my committee members, Prof. Adam Martin, Prof. Mike Hildreth, and Prof. Umesh Garg, for taking the time to review my research and encouraging me along the process with their feedback. I would also like to thank Prof. Nancy Marinelli for helping and working with me on several projects. I am also thankful to Nikitas Loukas and Alexander Ledovskoy for their guidance on the projects I worked on with them.
+
+  Dr. Giacomo Cuciatti has been a great mentor and friend and had made my stay at CERN enjoyable. I thank him for his guidance on the projects I worked with and accompanying me on my motorcycle diaries across Europe. Dr. Silvia Taroni was a hard-working and dedicated postdoctoral fellow. I thank her for helping me get accustomed to the software framework and guiding me to understand the details of the analysis. Dr. Nabarun Dev has been a supportive colleague and a good friend. He has helped me throughout my Ph.D., and I will always be glad to have met him.
+
+  Dr. Maria Cepada has continuously encouraged me and provided me with all the necessary resources to finish my research. She has been a great motivator and an excellent advisor, and I thank her for taking the time to get involved in the current analysis. I thank my analysis group members: Lourdes Urda and Varun Sharma, for taking an active interest in the analysis and providing me with timely support and feedback.
+
+  I thank the Notre Dame Physics Department for nurturing and supporting my growth as a scientist. I would especially like to thank Shari Herman in the physics office for helping me through many tasks over the years. I want to thank my friends and colleagues Saurabh Bansal, Nirupama Sensharma, Wenzhao Li, Reyer Band, Abhishek Das, Atul Kedia, Fanbo Meng, Ka Wa Ho, Lynne Lutton, Lara Zygala, Andrew Wightman, Kelci Mohrman, Nirmal Raj.
+
+  I thank my close friends, Pratyush Pandey, Saurabh Bansal, Khalique Newaz, and Shilpi Kumar, for being there and making my stay at Notre Dame a pleasant and wonderful journey.
+
+  Lastly, I would like to thank all the scientists, technicians and engineers, associated with CMS and LHC, whose collective work has made this thesis possible.
+
+\end{acknowledge}
 
 % A symbols section is optional.
 

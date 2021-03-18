@@ -1,4 +1,4 @@
-\begin{thebibliography}{108}
+\begin{thebibliography}{112}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -300,6 +300,20 @@ Joel~N. Butler and Tommaso Tabarelli~de Fatis.
 {Technical Proposal for the Phase-II Upgrade of the CMS Detector}.
 \newblock 6 2015.
 
+\bibitem[Adams et~al.(2016)]{Adams:2016viv}
+T.~Adams et~al.
+\newblock {Beam test evaluation of electromagnetic calorimeter modules made
+  from proton-damaged PbWO$_4$ crystals}.
+\newblock \emph{JINST}, 11\penalty0 (04):\penalty0 P04012, 2016.
+\newblock \doi{10.1088/1748-0221/11/04/P04012}.
+
+\bibitem[Ferri(2020)]{Ferri:2020nox}
+Federico Ferri.
+\newblock {The CMS ECAL Phase-2 upgrade for high precision energy and timing
+  measurements}.
+\newblock \emph{Nucl. Instrum. Meth. A}, 958:\penalty0 162159, 2020.
+\newblock \doi{10.1016/j.nima.2019.04.113}.
+
 \bibitem[Sj\"ostrand et~al.(2015)Sj\"ostrand, Ask, Christiansen, Corke, Desai,
   Ilten, Mrenna, Prestel, Rasmussen, and Skands]{Sjostrand:2014zea}
 Torbj\"orn Sj\"ostrand, Stefan Ask, Jesper~R. Christiansen, Richard Corke,
@@ -495,6 +509,12 @@ A.M. Sirunyan et~al.
 \newblock \emph{JINST}, 13\penalty0 (10):\penalty0 P10005, 2018{\natexlab{c}}.
 \newblock \doi{10.1088/1748-0221/13/10/P10005}.
 
+\bibitem[CMS(2019{\natexlab{b}})]{CMS-DP-2019-033}
+{Performance of the DeepTau algorithm for the discrimination of taus against
+  jets, electron, and muons}.
+\newblock Oct 2019{\natexlab{b}}.
+\newblock URL \url{https://cds.cern.ch/record/2694158}.
+
 \bibitem[Cacciari et~al.(2008{\natexlab{a}})Cacciari, Salam, and
   Soyez]{Cacciari:2008gp}
 Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
@@ -646,6 +666,11 @@ D.~de~Florian et~al.
 \newblock 2/2017, 10 2016.
 \newblock \doi{10.23731/CYRM-2017-002}.
 
+\bibitem[CMS(2020)]{CMS:2020dvp}
+{Measurement of Higgs boson production in the decay channel with a pair of
+  $\tau$ leptons}.
+\newblock 8 2020.
+
 \bibitem[Barlow and Beeston(1993)]{Barlow:1993dm}
 Roger~J. Barlow and Christine Beeston.
 \newblock {Fitting using finite Monte Carlo samples}.
@@ -697,9 +722,9 @@ W.K. Hastings.
 \newblock \emph{Biometrika}, 57:\penalty0 97--109, 1970.
 \newblock \doi{10.1093/biomet/57.1.97}.
 
-\bibitem[CMS(2019{\natexlab{b}})]{CMS:2019pyn}
+\bibitem[CMS(2019{\natexlab{c}})]{CMS:2019pyn}
 {Measurement of Higgs boson production and decay to the $\tau\tau$ final
   state}.
-\newblock 3 2019{\natexlab{b}}.
+\newblock 3 2019{\natexlab{c}}.
 
 \end{thebibliography}

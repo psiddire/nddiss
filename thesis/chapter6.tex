@@ -2,12 +2,12 @@
 % Chapter 6
 %
 
-\chapter{Event Selection}
+\chapter{Event selection}
 \label{event_sel}
 
 \section{Introduction}
 \label{evt_sel_intro}
-This chapter summarizes the event selection criteria for the analysis. The signal topology consists of an isolated muon or electron along with an oppositely charged isolated tau lepton (\taum, \taue, or \tauh). Jets misidentified as electrons or muons are suppressed by imposing isolation requirements. The events are first categorized into \mutau and \etau and then further divided into leptonic and hadronic channels based on tau decay mode. Figure~\ref{fig:feynman} shows the corresponding Feynman diagrams for the LFV \Hmt and \Het decays.
+This chapter summarizes the event selection criteria for the analysis. The signal topology consists of an isolated muon or electron along with an oppositely charged isolated tau lepton. The tau lepton can decay hadronically(\tauh) or leptonically into a muon(\taum), or an electron(\taue). Jets misidentified as electrons or muons are suppressed by imposing isolation requirements. The events are first categorized into \mutau and \etau and then further divided into leptonic and hadronic channels based on tau decay mode. Figure~\ref{fig:feynman} shows the corresponding Feynman diagrams for the LFV \Hmt and \Het decays.
 
 \begin{figure}[htbp]
   \centering
@@ -43,11 +43,11 @@ This analysis's final states are similar to the \Htt decay allowed by the SM and
 
 In each decay mode (\emu, \ehad, \mue, \muhad), a set of loose selection (preselection) for the respective signature is first defined. The jets in the event are required to have a $\pt > 30 \GeV$ and $\aeta < 4.7$. The event in each decay channel is divided into categories based on the number of jets in the event (0-jet, 1-jet, 2-jet) to enhance different Higgs boson production mechanisms.
 
-The 0-jet category enhances the ggF Higgs production contribution, while the 1-jet category enhances the ggF Higgs production with initial state radiation. The 2-jet category is further broken into two based on the two jets' invariant mass (\mjj). The threshold of 550 (500)~\GeV on \mjj for \mutau(\etau) channels has been optimized to give the best expected exclusion limits. Events with $\mjj < 550(500) \GeV$ enhances ggF Higgs production contribution while $\mjj \ge 550(500) \GeV$ enhances VBF Higgs production contribution.
+The 0-jet category enhances the ggF Higgs production contribution, while the 1-jet category enhances the ggF Higgs production with initial-state radiation. The 2-jet category is further broken into two based on the two jets' invariant mass (\mjj). The threshold of 550 (500)~\GeV on \mjj for \mutau(\etau) channels has been optimized to give the best expected exclusion limits. Events with $\mjj < 550(500) \GeV$ enhances ggF Higgs production contribution while $\mjj \ge 550(500) \GeV$ enhances VBF Higgs production contribution.
 
 To better discriminate between signal and background events, a BDT discriminator is trained using simulated events, using the TMVA tool of the ROOT analysis package~\cite{Hocker:2007ht}. After applying preselection, a binned likelihood is used to fit a BDT discriminator's distribution for the signal and the background contributions. We call this the BDT fit method. The collinear mass (\mcol) and the transverse mass (\mtl) used as input variables to the BDT are defined in the following paragraphs. A brief description of the BDT is given in the next section.
 
-The \mcol provides an estimate of \mh using the Higgs boson candidate's observed decay products. It is reconstructed using the collinear approximation based on the observation that, since $\mh \gg \text{M}_\Pgt$, the tau lepton decay products are highly Lorentz boosted in the direction of the tau candidate~\cite{Ellis:1987xu}. The momentum of the neutrino coming from tau decay can be approximated to have the same direction as the visible decay products of the \Pgt(\vectvis). Figure~\ref{fig:METproj} shows the corresponding Feynman diagram for the \met projected in the direction of the visible decay products of tau.
+The \mcol provides an estimate of \mh using the Higgs boson candidate's observed decay products. It is reconstructed using the collinear approximation based on the assumption that, since $\mh \gg \text{M}_\Pgt$, the tau lepton decay products are highly Lorentz boosted in the direction of the tau candidate~\cite{Ellis:1987xu}. The momentum of the neutrino coming from tau decay can be approximated to have the same direction as the visible decay products of the \Pgt(\vectvis). Figure~\ref{fig:METproj} shows the corresponding Feynman diagram for the \met projected in the direction of the visible decay products of tau.
 
 \begin{figure}[htbp]
   \centering
@@ -62,7 +62,7 @@ The \mtl is a variable constructed from the lepton momentum and the missing tran
 
 An alternate analysis has been implemented to cross-check the results obtained from the BDT fit method. This approach involves placing requirements on several kinematic variables and then using the resulting distribution of \mcol as a discriminant for a binned likelihood fit. Henceforth, we call this the \mcol fit method. The selection criterion described was developed without looking at the region's data where the signal is expected~\cite{Roodman:2003rw}. This approach is standard in particle physics analysis and eliminates the experimenter's bias.
 
-\section{Boosted Decision Tree}
+\section{Boosted decision tree}
 \label{bdt}
 A decision tree is a tree structure in which there is a condition on an attribute at each internal node. Each branch represents the outcome of this condition, and each leaf node represents a class label. The tree structure is built based on binary splits Figure~\ref{fig:dec_tree}. The tree structure's starting point is called a root node containing all the events we want to classify. A sequence of binary splits is made using conditions on the input variables provided to the classifier. The variable which ensures the best separation of the signal and the background is used for each split.
 
@@ -73,14 +73,14 @@ A decision tree is a tree structure in which there is a condition on an attribut
   \label{fig:dec_tree}
 \end{figure}
 
-Gini index is used as the separation criterion, and it is defined by $p.(1 - p)$, where $p$ is the purity of the node. The purity of a node is given by the ratio of signal events to all events in that node. Since the splitting criterion is always a cut on a single variable, the training procedure selects the variable and cut value that optimizes the Gini index increase between the parent node and the sum of the two daughter nodes' indices, weighted by their relative fraction of events. The same variable can thus be used for splitting several nodes, and the splitting is stopped when a predefined depth of the tree, purity of leaf nodes, the minimum number of events in a leaf node is reached. An event that ends up in a leaf node with most signal events is classified as a signal event and vice versa.
+Gini index is used as the separation criterion, and it is defined by $p.(1 - p)$, where $p$ is the purity of the node. The purity of a node is given by the ratio of signal events to all events in that node. Since the splitting criterion is always a selection on a single variable, the training procedure chooses the variable and the selection value that optimizes the Gini index increase between the parent node and the sum of the two daughter nodes' indices, weighted by their relative fraction of events. The same variable can thus be used for splitting several nodes, and the splitting is stopped when a predefined depth of the tree, purity of leaf nodes, the minimum number of events in a leaf node is reached. An event that ends up in a leaf node with most signal events is classified as a signal event and vice versa.
 
 A single decision tree is a weak classifier. The performance of weak classifiers can be enhanced using the boosting technique. This technique works by building classifiers using re-weighted training data and then taking a weighted majority vote of the sequence of classifiers thus produced. AdaBoost (adaptive boosting) method was used for boosting. AdaBoost is adaptive in that subsequent classifiers are tweaked in favor of those instances misclassified by previous classifiers. The misclassified event weights depend on the training error of each decision tree. The training error is calculated as
-
+%
 \begin{equation}
   \operatorname{err}_{m}=\frac{\sum_{i=1}^{N} w_{i} I\left(y_{i} \neq DT_{m}\left(x_{i}\right)\right)}{\sum_{i=1}^{N} w_{i}}
 \end{equation}
-
+%
 in which the subscript $m$ is the tree label and $w$ is the event weight. The $y_{i}$ is the true label for the event, 1 for signal and -1 for background. $DT_{m}(x_{i})$ is the output of the decision tree. The variable $I(y_{i} \neq DT_{m}(x_{i}))$ equals 1 if $y_{i} \neq DT_{m}(x_{i})$ or 0 otherwise. The weight for event $i$ is updated using $\alpha_{m}$ which is calculated from the training error and $\beta$ is the learning rate.
 
 \begin{align}
@@ -117,9 +117,9 @@ A BDT is trained after applying preselection criteria. The signal training sampl
   \label{fig:input_mt}
 \end{figure}
 
-The selection on \ptvecmiss is motivated by neutrinos in the tau lepton decays. The neutrino is expected to be collinear with \tauh, which leads to selection on the \dphitauhmet variable. The two leptons are usually in the opposite direction in the azimuthal plane, which leads to selection on the \dphimtauh variable. The BDT discriminator distributions of simulated signal, data, and backgrounds for each category in \muhad channel, are shown in chapter~\ref{results}.
+The selection on \ptvecmiss is motivated by neutrinos in the tau lepton decays. The neutrino is expected to be collinear with \tauh, which leads to selection on the \dphitauhmet variable. The two leptons are usually in the opposite direction in the azimuthal plane, which leads to selection on the \dphimtauh variable. The BDT discriminator distributions of simulated signal, data, and backgrounds for each category in \muhad channel, are shown in Chapter~\ref{results}.
 
-In the \mcol fit method, additional selection criteria require $\mttmet < 105 \GeV$ in the $0-, 1-,$ and $2-$jet ggF categories and $\mttmet < 85 \GeV$ in the $2-$jet VBF category. The \mcol distributions of simulated signal, data, and backgrounds for each category in \muhad channel, are shown in chapter~\ref{results}.
+In the \mcol fit method, additional selection criteria require $\mttmet < 105 \GeV$ in the $0-, 1-,$ and $2-$jet ggF categories and $\mttmet < 85 \GeV$ in the $2-$jet VBF category. The \mcol distributions of simulated signal, data, and backgrounds for each category in \muhad channel, are shown in Chapter~\ref{results}.
 
 \begin{figure}[htbp]
   \centering
@@ -137,7 +137,7 @@ The events are required to pass the cross-trigger with \pt thresholds on the muo
 
 The preselection criteria for \mue channel requires an isolated muon and isolated electron candidates of opposite electric charge and separated by $\dr > 0.3$. The muon candidate is required to have $\pt > 24 \GeV$, $\aeta < 2.4$ and isolation $\irel < 0.15$. The electron candidate is required to have $\pt > 13 \GeV$, $\aeta < 2.5$ and isolation $\irel < 0.1$. The \pt threshold of the electron and the muon are dictated by the cross-trigger we use for selecting the events of this channel. Events containing additional electrons, muons, or \tauh candidates are vetoed. Events with at least one b jet tagged by the DeepCSV algorithm are rejected to suppress the \ttbar background.
 
-Similar to the \muhad channel, a BDT is trained after applying preselection criteria. The signal training is done similarly, while for background training dominant contributors, \ttbar and \Zll ($\ell=\Pe, \Pgm, \Pgt$) events are mixed and weighted by their respective production cross-sections. The \ttbar process contributes dominantly for the $2-$jet category, with significant contribution to $1-$jet category. The \Zll process contributes dominantly for the $0-$ and $1-$jet categories. The QCD multijet background has the third largest contribution, so we use the lepton anti-isolated control region in data with the same electric charge for both the leptons as additional background for training. The input variables to the BDT are: $\pt^{\Pgm}$, $\pt^{\Pe}$, \mcol, \mtmmet, \mtemet, \dphiem, \dphimmet, and \dphiemet. The input variables' distribution to the BDT can be seen in Figure~\ref{fig:input_me}. The BDT discriminator distributions of simulated signal, data, and backgrounds for each category in \mue channel, are shown in chapter~\ref{results}.
+Similar to the \muhad channel, a BDT is trained after applying preselection criteria. The signal training is done similarly, while for background training dominant contributors, \ttbar and \Zll ($\ell=\Pe, \Pgm, \Pgt$) events are mixed and weighted by their respective production cross-sections. The \ttbar process contributes dominantly for the $2-$jet category, with significant contribution to $1-$jet category. The \Zll process contributes dominantly for the $0-$ and $1-$jet categories. The background from SM events comprised uniquely of jets produced through the strong interaction is referred to as QCD multijet events. The QCD multijet background has the third largest contribution, so we use the lepton anti-isolated control region in data with the same electric charge for both the leptons as additional background for training. The input variables to the BDT are: $\pt^{\Pgm}$, $\pt^{\Pe}$, \mcol, \mtmmet, \mtemet, \dphiem, \dphimmet, and \dphiemet. The input variables' distribution to the BDT can be seen in Figure~\ref{fig:input_me}. The BDT discriminator distributions of simulated signal, data, and backgrounds for each category in \mue channel, are shown in Chapter~\ref{results}.
 
 \begin{figure}[htbp!]
   \centering
@@ -153,7 +153,7 @@ Similar to the \muhad channel, a BDT is trained after applying preselection crit
   \label{fig:input_me}
 \end{figure}
 
-In the \mcol fit method, additional selection criteria require a stringent selection on muons, $\pt > 30 \GeV$ for $0-$jet category and $\pt > 26 \GeV$ in rest of the categories. The \mtmmet is required to be greater than 60, 40, 15 and 15~\GeV for $0-, 1-, 2-$jet ggF and VBF categories, respectively, while the azimuthal separation between the electron and \ptvecmiss is required to be less than 0.7, 0.7, 0.5 and 0.3 for $0-, 1-, 2-$jet ggF and VBF categories, respectively. For the $0-$ and $1-$jet categories $\dphiem > 2.5$ and 1.0, respectively. The preselections and the selections for \muhad and \mue channels in all categories are summarized in Table~\ref{tab:mutau_evtselection}. The \mcol distributions of simulated signal, data, and backgrounds for each category in \mue channel, are shown in chapter~\ref{results}.
+In the \mcol fit method, additional selection criteria require a stringent selection on muons, $\pt > 30 \GeV$ for $0-$jet category and $\pt > 26 \GeV$ in rest of the categories. The \mtmmet is required to be greater than 60, 40, 15 and 15~\GeV for $0-, 1-, 2-$jet ggF and VBF categories, respectively, while the azimuthal separation between the electron and \ptvecmiss is required to be less than 0.7, 0.7, 0.5 and 0.3 for $0-, 1-, 2-$jet ggF and VBF categories, respectively. For the $0-$ and $1-$jet categories $\dphiem > 2.5$ and 1.0, respectively. The preselections and the selections for \muhad and \mue channels in all categories are summarized in Table~\ref{tab:mutau_evtselection}. The \mcol distributions of simulated signal, data, and backgrounds for each category in \mue channel, are shown in Chapter~\ref{results}.
 
 \begin{figure}[htbp]
   \centering
@@ -179,7 +179,7 @@ The first step is to require the events to pass a single electron trigger. For 2
 
 The  preselection in this channel requires an isolated electron and an isolated \tauh candidates of opposite charge and separated by $\dr > 0.5$. The electron candidate is required to have $\pt > 27 \GeV$, $\aeta < 2.1$ and isolation $\irel < 0.15$. The \tauh candidate is required to have $\pt > 30 \GeV$ and $\aeta < 2.3$. Events containing additional electrons, muons, or \tauh candidates are vetoed. Events with at least one b jet tagged by DeepCSV algorithm are rejected in order to suppress the \ttbar background.
 
-A BDT is trained after applying preselection criteria. The same training samples, as used in the \muhad channel, are considered. The list of input variables to the BDT training stays the same, except for the addition of the visible mass, \mvis variable, and removing \ptvecmiss. The \mvis variable is more useful as the relative composition of the two channels' backgrounds is different. In particular, $\Zee+$jets background contributes more with respect to $\Zmm+$jets background. The input variables' distribution to the BDT can be seen in Figure~\ref{fig:input_et}. The BDT discriminator distributions of simulated signal, data, and backgrounds for each category in \ehad channel, are shown in chapter~\ref{results}.
+A BDT is trained after applying preselection criteria. The same training samples, as used in the \muhad channel, are considered. The list of input variables to the BDT training stays the same, except for the addition of the visible mass, \mvis variable, and removing \ptvecmiss. The \mvis variable is more useful as the relative composition of the two channels' backgrounds is different. In particular, $\Zee+$jets background contributes more with respect to $\Zmm+$jets background. The input variables' distribution to the BDT can be seen in Figure~\ref{fig:input_et}. The BDT discriminator distributions of simulated signal, data, and backgrounds for each category in \ehad channel, are shown in Chapter~\ref{results}.
 
 \begin{figure}[htbp!]
   \centering
@@ -195,7 +195,7 @@ A BDT is trained after applying preselection criteria. The same training samples
   \label{fig:input_et}
 \end{figure}
 
-In the \mcol fit method, additional selection criteria require $\mttmet < 60 \GeV$ in all the categories. The \mcol distributions of simulated signal, data, and backgrounds for each category in \ehad channel, are shown in chapter~\ref{results}.
+In the \mcol fit method, additional selection criteria require $\mttmet < 60 \GeV$ in all the categories. The \mcol distributions of simulated signal, data, and backgrounds for each category in \ehad channel, are shown in Chapter~\ref{results}.
 
 \begin{figure}[htbp]
   \centering
@@ -213,7 +213,7 @@ The events are required to pass the cross-trigger with \pt thresholds on the ele
 
 This channel's preselection criteria require an isolated electron and isolated muon candidates of opposite charge and separated by $\dr > 0.4$. The electron candidate is required to have $\pt > 24 \GeV$, $\aeta < 2.4$ and isolation $\irel < 0.1$. The muon candidate is required to have $\pt > 10 \GeV$, $\aeta < 2.5$ and isolation $\irel < 0.15$. The \pt threshold of the electron and the muon are dictated by the trigger we use for selecting the events of this channel. Events containing additional electrons, muons, or \tauh candidates are vetoed. Events with at least one b jet tagged by the DeepCSV algorithm are rejected to suppress the \ttbar background. The selections for both \ehad and \emu channels in all categories are also summarized in Table~\ref{tab:etau_evtselection}.
 
-The BDT training is done after applying preselection criteria. The same training samples as used in the \mue channel are considered. The list of input variables to the BDT training also stays the same, except for the addition of the visible mass, \mvis variable, and removal of \mtemet. The input variables' distribution to the BDT can be seen in Figure~\ref{fig:input_em}. The BDT discriminator distributions of simulated signal, data, and backgrounds for each category in \emu channel, are shown in chapter~\ref{results}.
+The BDT training is done after applying preselection criteria. The same training samples as used in the \mue channel are considered. The list of input variables to the BDT training also stays the same, except for the addition of the visible mass, \mvis variable, and removal of \mtemet. The input variables' distribution to the BDT can be seen in Figure~\ref{fig:input_em}. The BDT discriminator distributions of simulated signal, data, and backgrounds for each category in \emu channel, are shown in Chapter~\ref{results}.
 
 \begin{figure}[htbp!]
   \centering
@@ -229,7 +229,7 @@ The BDT training is done after applying preselection criteria. The same training
   \label{fig:input_em}
 \end{figure}
 
-In the \mcol fit method, additional selection criteria require a stringent selection on electrons, $\pt > 30 \GeV$ for $0-$jet category and $\pt > 26 \GeV$ in rest of the categories. The \mtemet is required to be greater than 60, 40, 15 and 15~\GeV for $0-, 1-, 2-$jet ggF and VBF categories, respectively, while the azimuthal separation between the muon and \ptvecmiss is required to be less than 0.7, 0.7, 0.5 and 0.3 for $0-, 1-, 2-$jet ggF and VBF categories, respectively. For the $0-$ and $1-$jet categories $\dphiem > 2.5$ and 1.0, respectively. The selections for both \ehad and \emu channels in all categories are also summarized in Table~\ref{tab:etau_evtselection}. The \mcol distributions of simulated signal, data, and backgrounds for each category in \emu channel, are shown in chapter~\ref{results}.
+In the \mcol fit method, additional selection criteria require a stringent selection on electrons, $\pt > 30 \GeV$ for $0-$jet category and $\pt > 26 \GeV$ in rest of the categories. The \mtemet is required to be greater than 60, 40, 15 and 15~\GeV for $0-, 1-, 2-$jet ggF and VBF categories, respectively, while the azimuthal separation between the muon and \ptvecmiss is required to be less than 0.7, 0.7, 0.5 and 0.3 for $0-, 1-, 2-$jet ggF and VBF categories, respectively. For the $0-$ and $1-$jet categories $\dphiem > 2.5$ and 1.0, respectively. The selections for both \ehad and \emu channels in all categories are also summarized in Table~\ref{tab:etau_evtselection}. The \mcol distributions of simulated signal, data, and backgrounds for each category in \emu channel, are shown in Chapter~\ref{results}.
 
 \begin{figure}[htbp]
   \centering
